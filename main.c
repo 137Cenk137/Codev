@@ -478,6 +478,137 @@ void week_3_question_3_7(){
        }
    }
 }
+void week_5_question_5_1(){
+float FindThreeAverage(int arr[],int lenght)
+{
+     int sum = 0;
+    if (lenght % 2 != 1 ){
+        sum += arr[(lenght/2)] + arr[(lenght/2)-1] + arr[(lenght/2)+1];
+    }
+    else{
+      printf("enter proper format");
+      return 0;
+        
+    }
+    
+    return (float) sum / 3; 
+}
+
+int arr[7] = {1,2,3,4,5,6,7};
+    int lenght = sizeof(arr)/sizeof(arr[1]);
+    printf(" FindAverage = %f",FindThreeAverage(arr,lenght));
+}
+void week_5_question_5_2(){
+    float FindAverage(int arr[],int lenght)
+{
+   
+    int sum =0 ;
+    for(int i = 0 ; i < lenght;i++ ){
+        sum += arr[i];
+    }
+    return (float) sum / lenght; 
+}
+  int arr[6] = {1,2,3,4,5,6};
+    int lenght = sizeof(arr)/sizeof(arr[1]);
+    printf(" FindAverage = %f",FindAverage(arr,lenght));
+}
+void week_5_question_5_3(){
+     int arr[SIZE] = {5, 7, 9, 11};
+    for(int i = 0; i < SIZE ; i++){
+        printf("%d arr[%d]",i,arr[i]);
+        for(int j = 0;j < arr[i];j++){
+            printf("*");
+        }
+        puts("");
+    }
+}
+void week_5_question_5_4(){
+     int arr[4] = {1,1,1,1};
+    
+    for(int i = 0;i< 4;i++){
+       
+            if(i == 0){
+                for(int j = 0;j < 4;j++){
+                     printf("%d",arr[j]);
+                }
+            }
+            else if(i ==1){
+               for(int j = 0;j < 1;j++){
+                     printf("%d",arr[j]);
+                }
+            }
+        else if(i ==2){
+               for(int j = 0;j < 2;j++){
+                     printf("%d",arr[j]);
+                }
+            }
+            else{
+                 printf("  ");
+                 for(int j = 0;j < 2;j++){
+                     printf("%d",arr[j]);
+                }
+            }
+
+        puts("");
+    }
+    
+}
+void week_5_question_5_5(){
+    void SumTwoVector(int arr[],int arr2[],int lenght){
+    int newArr[lenght];
+    for(int i = 0;i<lenght ;i++){
+        newArr[i] = arr2[i] + arr[i];
+    }
+    printf("result= ");
+    for(int i = 0 ; i< lenght;i++){
+        printf("%d",newArr[i]);
+    }
+}
+}
+
+void week_5_question_5_6(){
+    int FindTheLargest(int arr[],int length){
+    int max = arr[0];
+    for(int i = 1; i<length ; i++){
+        if(max < arr[i]){
+            max = arr[i];
+        }
+    }
+    return max;
+  
+}
+int FindTheSmallest(int arr[],int length){
+    int min = arr[0];
+    for(int i = 1; i<length ; i++){
+        if(min > arr[i]){
+            min = arr[i];
+        }
+    }
+    return min;
+  
+}
+}
+void week_5_question_5_7(){
+    int vector1[3] = {1,212,3};
+    int vector2[7] = {434,12,3,43,45,4353,454};
+    
+    int temp;
+    for(int i = 1 ; i < 7;i++){
+        for(int j = 1;j < i + 1;j++ ){
+            if(vector2[j] < vector2[j-1]){
+                temp = vector2[j-1] ;
+                vector2[j-1] = vector2[j];
+                vector2[j] = temp;
+                
+                
+            }
+        }
+    }
+    
+   for(int i = 0;i <7;i++){
+       printf("%d\n",vector2[i]);
+   }
+}
 
 int main()
 {
